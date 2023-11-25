@@ -17,7 +17,7 @@ namespace Laboratorium_3.Models
 
         [Phone]
         [RegularExpression("^[0-9]{9,9}$", ErrorMessage = "Pole musi zawierac cyfry (9)")]
-        public string Phone { get; set; }
+        public string? Phone { get; set; }
 
         [DataType(DataType.Date)]
         public DateTime? Birth { get; set; }

@@ -7,6 +7,8 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<IContactService,MemoryContactService>();
+builder.Services.AddDbContext<EFData.AppDbContext>();
+builder.Services.AddTransient<IContactService, EFContactService>();
 
 var app = builder.Build();
 
